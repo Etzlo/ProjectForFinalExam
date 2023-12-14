@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novikov Maxim</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
+        defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/switch.js" defer></script>
+    <script src="/js/logIn.js" defer></script>
+    <script src="/js/toDo.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header--inner">
+                    <div class="logo">
+                        <a href="#" class="logo-item top-link">MAKSIM</a>
+                    </div>
+
+                    <div class="mobile-nav-btn">
+                        <button class="mobile-btn" type="button">
+                            <span class="mobile-btn-item"></span>
+                            <span class="mobile-btn-item"></span>
+                            <span class="mobile-btn-item"></span>
+                            <span class="mobile-btn-item"></span>
+                        </button>
+                    </div>
+
+                    <div class="mobile-nav">
+                        <ul class="mobile-nav--inner">
+                            <li class="mobile-nav-item">
+                                <i class="fas fa-user"><span class="user-name" style="display: none;"></span></i>
+                            </li>
+                            <li class="mobile-nav-item mobile-nav-item-divider">
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-item-link" href="#" onclick="openModal('login')">Log
+                                    in</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-item-link" href="#" onclick="openModal('register')">Sign in</a>
+                            </li>
+                            <li class="mobile-nav-item mobile-nav-item-divider">
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link about-link">About Me</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link contacts-link">Contacts</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link skills-link">Skills</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link projects-link">Projects</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link toDo-link">To Do</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link schedule-link">Schedule</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a href="#" class="mobile-nav-item-link myCity-link">My City</a>
+                            </li>
+                            <li class="mobile-nav-item mobile-nav-item-divider">
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-item-link" href="https://t.me/novikoff0">Support</a>
+                            </li>
+                            <li class="mobile-nav-item">
+                                <a class="mobile-nav-item-link" href="#" id="logoutButton" onclick="logout()">Log
+                                    out</a>
+                            </li>
+
+                    </div>
+
+                    <nav class="nav">
+                        <ul class="nav--inner">
+                            <li class="nav-item">
+                                <a href="#" class="nav-item-link about-link">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item-link contacts-link">Contacts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item-link skills-link">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item-link projects-link">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-item-link toDo-link">To Do</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-item nav-item-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                    role="button" aria-expanded="false">Other</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item dropdown-item-log_in schedule-link"
+                                            href="#">Schedule</a></li>
+                                    <li><a class="dropdown-item dropdown-item-log_in myCity-link" href="#">My
+                                            City</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item dropdown-item-log_in"
+                                            href="https://t.me/novikoff0">Support</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <ul class="nav nav-pills">
+                        <li class="nav-item dropdown">
+                            <a class="nav-item dropdown-toggle dropdown-toggle-log_in" data-bs-toggle="dropdown"
+                                href="#" role="button" aria-expanded="false"><i class="fas fa-user"><span
+                                        class="user-name" style="display: none;"></span></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-log_in">
+                                <li><a class="dropdown-item dropdown-item-log_in" href="#"
+                                        onclick="openModal('login')">Log
+                                        in</a></li>
+                                <li><a class="dropdown-item dropdown-item-log_in" href="#"
+                                        onclick="openModal('register')">Sign in</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item dropdown-item-log_in" href="#" id="logoutButton"
+                                        onclick="logout()">Log out</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-item-link" id="other-link">Other</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="logIn-container">
+                <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeModal" onclick="closeModal('login')">&times;</span>
+                        <h2 class="mb-4">Login</h2>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="performLogin()">Login</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="registerModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeModal" onclick="closeModal('register')">&times;</span>
+                        <h2 class="mb-4">Register</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="newUsername">Username:</label>
+                                <input type="text" class="form-control" id="newUsername" name="newUsername" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newPassword">Password:</label>
+                                <input type="password" class="form-control" id="newPassword" name="newPassword"
+                                    required>
+                            </div>
+
+                            <button type="button" class="btn btn-primary"
+                                onclick="performRegistration()">Register</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="overlay" onclick="closeModal('login'); closeModal('register')"></div>
+            </section>
+
+            <section class="section active main--inner" id="top">
+                <div class="top">
+                    <div class="container">
+                        <div class="top--inner">
+                            <h1>Web Developer</h1>
+                            <p class="top-text">
+                                I'm Novikov Maksim. I was born in Pavlodar. I study in IITU
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section about" id="about" style="display: none;">
+                <div class="container">
+                    <div class="about--inner">
+                        <h1>About Me</h1>
+                        <hr>
+                        <p class="about-text">
+                            Hi, my name is Maxim and I was born in the beautiful city of Pavlodar. My
+                            educational history
+                            began at school number 2, where I gained not only knowledge, but also unforgettable moments
+                            with
+                            friends and
+                            teachers.
+                        </p>
+                        <hr>
+                        <p class="about-text">
+                            After successfully completing school, I decided to go to the capital city of Almaty to start
+                            a
+                            new
+                            stage of my life and education.
+                            a new stage of my life and education. In my dreams of self-development and new
+                            opportunities, I
+                            entered the
+                            International Institute of Information Technologies (IITU), where I started studying the
+                            world
+                            of
+                            computer science.
+                            sciences.
+                        </p>
+                        <hr>
+                        <p class="about-text">
+                            During my studies, I discovered my passion for web development, especially frontend
+                            development.
+                            Creating beautiful
+                            and functional interfaces has always been a fascinating challenge for me. Now I'm on my way
+                            to
+                            mastering
+                            the art of web development and creating modern websites.
+                        </p>
+                        <hr>
+                        <p class="about-text">
+                            My day consists of learning new technologies, experimenting with code, and solving creative
+                            problems. Я
+                            passionately learn frontend development skills by learning programming languages such as
+                            HTML,
+                            CSS
+                            and
+                            JavaScript. My goal is to create interactive and intuitive web applications that can
+                            improve the user experience.
+                        </p>
+                        <hr>
+                        <p class="about-text">
+                            I currently reside in Almaty, where I am on a quest to find inspiration in this dynamic
+                            city. My
+                            life is filled with a desire for constant growth, and I look forward to the new challenges
+                            that
+                            the
+                            world of web development will bring me.
+                            the world of web development will bring me. If you have any questions or if you too share my
+                            passion, let me know - I'd love to meet new people and share ideas!
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section contacts" id="contacts" style="display: none;">
+                <div class="container">
+                    <h1>Contacts</h1>
+                    <div class="contacts--inner">
+                        <div class="card">
+                            <a href="https://instagram.com/novikoff0" target="_blank">
+                                <div class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Instagram</h3>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <p>@novikoff0</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="https://wa.me/+77714457006">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>WhatsApp</h3>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <p>+7 771 445 70 06</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="mailto:novikoff04@gmail.com">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Gmail</h3>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <p>novikoff04@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="mailto:novikoff04@gmail.com">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Gmail</h3>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <p>novikoff04@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="mailto:novikoff04@gmail.com">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Gmail</h3>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <p>novikoff04@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="mailto:novikoff04@gmail.com">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>Gmail</h3>
+                                </div>
+                            </a>
+                            <div class="info">
+                                <p>novikoff04@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section skills" id="skills" style="display: none;">
+                <div class="container">
+                    <h1>Skills</h1>
+                    <div class="skills--inner">
+                        <div class="card">
+                            <div class="info">
+                                <h3>HTML</h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="skills-info">
+                                <p>Advanced</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="info">
+                                <h3>CSS</h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="skills-info">
+                                <p>Advanced</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="info">
+                                <h3>JavaScript</h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="skills-info">
+                                <p>Beginner</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="info">
+                                <h3>Bootstrap</h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="skills-info">
+                                <p>Beginner</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="info">
+                                <h3>Node JS</h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="skills-info">
+                                <p>What's that?</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="info">
+                                <h3>Python</h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="skills-info">
+                                <p>Medium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section projects" id="projects" style="display: none;">
+                <div class="projects-container">
+                    <div class="projects-app">
+                        <h1>My Projects</h1>
+                        <div class="projects-app--inner">
+                            <a href="#" class="projects-card-link">
+                                <div class="project-card">
+                                    <img class="project-img" src="/images/project-1.jpg" alt="">
+                                    <div class="info project-info">
+                                        <p>Converter, Calculator, Modulo</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="projects-card-link">
+                                <div class="project-card">
+                                    <img class="project-img" src="/images/project-2.jpg" alt="">
+                                    <div class="info project-info">
+                                        <p>Catch The Number</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="projects-card-link">
+                                <div class="project-card">
+                                    <img class="project-img" src="/images/project-3.jpg" alt="">
+                                    <div class="info project-info">
+                                        <p>Tea site</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="projects-card-link">
+                                <div class="project-card">
+                                    <img class="project-img" src="/images/project-3.jpg" alt="">
+                                    <div class="info project-info">
+                                        <p>Tea site</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="projects-card-link">
+                                <div class="project-card">
+                                    <img class="project-img" src="/images/project-3.jpg" alt="">
+                                    <div class="info project-info">
+                                        <p>Tea site</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="projects-card-link">
+                                <div class="project-card">
+                                    <img class="project-img" src="/images/project-3.jpg" alt="">
+                                    <div class="info project-info">
+                                        <p>Tea site</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="section toDo" id="toDo" style="display: none;">
+                <div class="container todo-container">
+                    <h1>To Do List</h1>
+                    <div class="todo-app">
+                        <div class="todo-container--inner" style="width: 400px;">
+                            <h2 class="todo__caption">List of Tasks</h2>
+                            <div class="tdlApp">
+                                <input type="text" class="form-control" placeholder="New Task">
+                                <div class="tdlDiv">
+                                    <ul class="list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section schedule" id="schedule" style="display: none;">
+                <div class="schedule-container">
+                    <h1>Schedule</h1>
+                    <div class="schedule-app">
+                        <div class="monday_schedule">
+                            <table>
+                                <tbody>
+                                    <h5>Monday</h5>
+                                    <thead>
+                                        <tr>
+                                            <th class="sch-time">Time</th>
+                                            <th class="sch-lesson">Lesson</th>
+                                            <th class="sch-teacher">Teacher</th>
+                                            <th class="sch-type">Type</th>
+                                            <th class="sch-cabinet">Cabinet</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>08:00-08:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>09:00-09:50</td>
+                                        <td>Introduction to Programming</td>
+                                        <td>Chinibayev Y. G.</td>
+                                        <td>L</td>
+                                        <td>Bayzak, 408</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00-10:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00-11:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:10-13:00</td>
+                                        <td>ICT</td>
+                                        <td>Mukhammejanova D.M.</td>
+                                        <td>L</td>
+                                        <td>Bayzak, 214</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13:10-14:00</td>
+                                        <td>Discrete mathematics</td>
+                                        <td>Srazh A.</td>
+                                        <td>PS</td>
+                                        <td>Bayzak, 425</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:10-15:00</td>
+                                        <td>Discrete mathematics</td>
+                                        <td>Srazh A.</td>
+                                        <td>PS</td>
+                                        <td>Bayzak, 425</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:10-16:00</td>
+                                        <td>Algebra and Geometry</td>
+                                        <td>Zhumasheva A.A.</td>
+                                        <td>L</td>
+                                        <td>Bayzak, 420</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:10-17:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17:20-18:10</td>
+                                        <td>Foreign language</td>
+                                        <td>Abdulina M.</td>
+                                        <td>STIC</td>
+                                        <td>ONLINE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tuesday_schedule">
+                            <table>
+                                <tbody>
+                                    <h5>Tuesday</h5>
+                                    <thead>
+                                        <tr>
+                                            <th class="sch-time">Time</th>
+                                            <th class="sch-lesson">Lesson</th>
+                                            <th class="sch-teacher">Teacher</th>
+                                            <th class="sch-type">Type</th>
+                                            <th class="sch-cabinet">Cabinet</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>08:00-08:50</td>
+                                        <td>Discrete mathematics</td>
+                                        <td>Kadirbayeva Z.M.</td>
+                                        <td>L</td>
+                                        <td>Bayzak, 426</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09:00-09:50</td>
+                                        <td>Discrete mathematics</td>
+                                        <td>Kadirbayeva Z.M.</td>
+                                        <td>L</td>
+                                        <td>Bayzak, 426</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00-10:50</td>
+                                        <td>Algebra and Geometry</td>
+                                        <td>Usmanova A.</td>
+                                        <td>PS</td>
+                                        <td>Main, 905</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00-11:50</td>
+                                        <td>Algebra and Geometry</td>
+                                        <td>Usmanova A.</td>
+                                        <td>PS</td>
+                                        <td>Main, 905</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:10-13:00</td>
+                                        <td>Foreign language</td>
+                                        <td>Vasquez M.</td>
+                                        <td>PS</td>
+                                        <td>Main, 708</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13:10-14:00</td>
+                                        <td>Foreign language</td>
+                                        <td>Vasquez M.</td>
+                                        <td>PS</td>
+                                        <td>Main, 708</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:10-15:00</td>
+                                        <td>Introduction to Programming</td>
+                                        <td>Chinibayev Y.G.</td>
+                                        <td>PS</td>
+                                        <td>Bayzak, 705</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:10-16:00</td>
+                                        <td>ICT</td>
+                                        <td>Mukhammejanova D.M.</td>
+                                        <td>STIC</td>
+                                        <td>ONLINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:10-17:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17:20-18:10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="wednesday_schedule">
+                            <table>
+                                <tbody>
+                                    <h5>Wednesday</h5>
+                                    <thead>
+                                        <tr>
+                                            <th class="sch-time">Time</th>
+                                            <th class="sch-lesson">Lesson</th>
+                                            <th class="sch-teacher">Teacher</th>
+                                            <th class="sch-type">Type</th>
+                                            <th class="sch-cabinet">Cabinet</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>08:00-08:50</td>
+                                        <td>ICT</td>
+                                        <td>Mukhammejanova D.M.</td>
+                                        <td>Lab</td>
+                                        <td>Bayzak, 403</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09:00-09:50</td>
+                                        <td>ICT</td>
+                                        <td>Mukhammejanova D.M.</td>
+                                        <td>Lab</td>
+                                        <td>Bayzak, 403</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00-10:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00-11:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:10-13:00</td>
+                                        <td>Web Technology</td>
+                                        <td>Mukhanov S.B.</td>
+                                        <td>L</td>
+                                        <td>Main, 800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13:10-14:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:10-15:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:10-16:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:10-17:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17:20-18:10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="thursday_schedule">
+                            <table>
+                                <tbody>
+                                    <h5>Thursday</h5>
+                                    <thead>
+                                        <tr>
+                                            <th class="sch-time">Time</th>
+                                            <th class="sch-lesson">Lesson</th>
+                                            <th class="sch-teacher">Teacher</th>
+                                            <th class="sch-type">Type</th>
+                                            <th class="sch-cabinet">Cabinet</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>08:00-08:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>09:00-09:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00-10:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00-11:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:10-13:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13:10-14:00</td>
+                                        <td>Foreign language</td>
+                                        <td>Vasquez M.</td>
+                                        <td>PS</td>
+                                        <td>Bayzak, 420</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:10-15:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:10-16:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:10-17:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17:20-18:10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="friday_schedule">
+                            <table>
+                                <tbody>
+                                    <h5>Friday</h5>
+                                    <thead>
+                                        <tr>
+                                            <th class="sch-time">Time</th>
+                                            <th class="sch-lesson">Lesson</th>
+                                            <th class="sch-teacher">Teacher</th>
+                                            <th class="sch-type">Type</th>
+                                            <th class="sch-cabinet">Cabinet</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>08:00-08:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>09:00-09:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00-10:50</td>
+                                        <td>Introduction to Programming,</td>
+                                        <td>Chinibayev Y.G.</td>
+                                        <td>PS</td>
+                                        <td>Main, 406</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00-11:50</td>
+                                        <td>Web Technology</td>
+                                        <td>Yermekova D.Y.</td>
+                                        <td>PS</td>
+                                        <td>Main, 606</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:10-13:00</td>
+                                        <td>Web Technology</td>
+                                        <td>Yermekova D.Y.</td>
+                                        <td>PS</td>
+                                        <td>Main, 606</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13:10-14:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:10-15:00</td>
+                                        <td>Introduction to Programming,</td>
+                                        <td>Chinibayev Y.G.</td>
+                                        <td>PS</td>
+                                        <td>Main, 706</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:10-16:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:10-17:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17:20-18:10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="saturday_schedule">
+                            <table>
+                                <tbody>
+                                    <h5>Saturday</h5>
+                                    <thead>
+                                        <tr>
+                                            <th class="sch-time">Time</th>
+                                            <th class="sch-lesson">Lesson</th>
+                                            <th class="sch-teacher">Teacher</th>
+                                            <th class="sch-type">Type</th>
+                                            <th class="sch-cabinet">Cabinet</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>08:00-08:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>09:00-09:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:00-10:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00-11:50</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:10-13:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13:10-14:00</td>
+                                        <td>Algebra and Geometry</td>
+                                        <td>Zhumasheva A.A.</td>
+                                        <td>STIC</td>
+                                        <td>ONLINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:10-15:00</td>
+                                        <td>Discrete mathematics</td>
+                                        <td>Kadirbayeva Z.M.</td>
+                                        <td>STIC</td>
+                                        <td>ONLINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:10-16:00</td>
+                                        <td>Introduction to Programming</td>
+                                        <td>Chinibayev Y.G.</td>
+                                        <td>STIC</td>
+                                        <td>ONLINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16:10-17:00</td>
+                                        <td>WEB technology,</td>
+                                        <td>Mukhanov S.B.</td>
+                                        <td>STIC</td>
+                                        <td>ONLINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17:20-18:10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section myCity" id="myCity">
+                <div class="container myCity-container">
+                    <h1>My City</h1>
+                    <div class="myCity-app">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/images/city-1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/city-2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/city-3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/images/city-4.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-title"><span>Novikoff &#169; 2023</span></p>
+        </footer>
+    </div>
+</body>
+
+</html>
