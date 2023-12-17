@@ -83,6 +83,12 @@ header {
     transition: transform .5s ease;
 }
 
+.error-message{
+    position: relative;
+    color: red;
+    margin-top: 30px;
+}
+
 .nav-item {
     display: flex;
     align-items: center;
